@@ -1,0 +1,67 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block shit %}<link href="{% static 'styles/style_pages.css' %}" rel="stylesheet">{% endblock %}
+
+{% block title %}Capo - Guitars{% endblock %}
+
+
+{% block body %}
+
+
+
+
+
+<!--guitars-->
+<div class="container-fluid padding">
+    <div class="row text-center padding">
+        <div class="col-12">
+            <h1 class="display-4">Guitars</h1>
+            <h3 class="display-6">Choose from our wide variety of guitars</h3>
+        </div>
+        <hr>
+    </div>
+</div>
+
+
+<!--cards-->
+
+
+<div class="container-fluid padding">
+    <div class="row padding">
+        
+        {% for gui in guitar %}
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-imd-top" src="{{gui.guitar_image.url}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{gui.guitar_name}}</h5>
+                    <h6 class="card-title-2">Rs. {{gui.guitar_price}}</h6>
+                    <div>
+                        <strong>Features</strong>
+                    </div>
+                    <ul>
+                        <li>{{gui.guitar_type}}</li>
+                        <li>Truss Rod : {{gui.truss}}</li>
+                        <li>{{gui.cut}}</li>
+                        <li>Top : {{gui.top}}</li>
+                        <li>Back/Sides : {{gui.sideback}}</li>
+                        <li>{{gui.feature_1}}</li>
+                        <li>{{gui.feature_2}}</li>
+                        <li>{{gui.feature_3}}</li>
+                        <li>{{gui.feature_4}}</li>
+                        <li>Pickup : {{gui.pickup}}</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline-secondary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        
+    </div>
+</div>
+
+
+{% endblock %}

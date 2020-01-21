@@ -1,0 +1,95 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block shit %}<link href="{% static 'styles/style_index.css' %}" rel="stylesheet">{% endblock %}
+
+{% block title %}Capo - A one stop store for your guitars{% endblock %}
+{% block body %}
+
+<!--- Image Slider -->
+<div id="slides" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+        <li data-target="#slides" data-slide-to="0" class="active"></li>
+        <li data-target="#slides" data-slide-to="1"></li>
+        <li data-target="#slides" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'images/b4.png' %}">
+            <div class="carousel-caption">
+                <h1 class="display-2">once a classic always a classic</h1>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/b1.png' %}">
+            <div class="carousel-caption">
+                <h1 class="display-2">mastering the art</h1>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'images/pdt4.png' %}">
+            <div class="carousel-caption">
+                <h1 class="display-2">In all sizes now</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!--- Jumbotron -->
+    <div class="container-fluid">
+        <div class="row jumbotron">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-9 col-xl-10">
+                <p class="lead">This is some generic content about how some of our guitars are the best.</p>            
+            </div>
+            
+        </div>
+    </div>
+    <!---what we offer -->
+    <div class="container-fluid padding">
+        <div class="row text-center padding">
+            <div class="col-12">
+                <h1 class="display-4">What we offer</h1>
+            </div>
+            <hr>
+        </div>
+    </div>
+    <!--- Cards -->
+    <div class="container-fluid padding">
+        <div class="row text-center padding">
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-imd-top" src="{% static 'images/pdt.png' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">Guitars</h5>
+                        <p class="card-text">Here you will find the best guitars that will bring out the best in you.</p>
+                        <a href="/Guitars" class="btn btn-outline-secondary">Check out</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-imd-top" src="{% static 'images/pdt2.png' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">Accessories</h5>
+                        <p class="card-text">A plethora of plectrums, gig bags, and capos that help you master the art.</p>
+                        <a href="/Accessories" class="btn btn-outline-secondary">Check out</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-imd-top" src="{% static 'images/pdt3.png' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">Apparel</h5>
+                        <p class="card-text">Tees, Jackets, Hoodies, you name it!</p>
+                        <a href="/Apparel" class="btn btn-outline-secondary">Check out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

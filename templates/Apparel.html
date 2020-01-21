@@ -1,0 +1,60 @@
+
+
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block shit %}<link href="{% static 'styles/style_pages.css' %}" rel="stylesheet">{% endblock %}
+
+{% block title %}Capo - Apparel {% endblock %}
+
+{% block body %}
+
+
+<!--apparel-->
+<div class="container-fluid padding">
+    <div class="row text-center padding">
+        <div class="col-12">
+            <h1 class="display-4">Apparel</h1>
+            <h3 class="display-6">Trendy styles to keep you up with the swag!!!</h3>
+        </div>
+        <hr>
+    </div>
+</div>
+
+
+<!--cards-->
+
+
+<div class="container-fluid padding">
+    <div class="row padding">
+        {%for app in appa %}
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-imd-top" src='{{app.app_image.url}}'>
+                <div class="card-body">
+                    <h5 class="card-title">{{app.app_name}}</h5>
+                    <h6 class="card-title-2">Rs. {{app.app_price}}</h6>
+                    <div>
+                        <strong>Features</strong>
+                    </div>
+                    <ul>
+                        <li>{{app.feature_1}}</li>
+                        <li>{{app.feature_2}}</li>
+                        <li>{{app.feature_3}}</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline-secondary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}
+
+
+
+

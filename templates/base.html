@@ -1,0 +1,105 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	{% block shit %} {% endblock %}
+</head>
+<body>
+
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="{% static 'images/logo.png' %}"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/register">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Guitars">Guitars</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Accessories">Accessories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Apparel">Apparel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cart</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+{% block body %}
+{% endblock %}
+
+
+
+<!--- Connect -->
+<div class="container-fluid padding">
+    <div class="row text-center padding">
+        <div class="col-12">
+            <h2>Connect</h2>
+        </div>
+        <div class="col-12 social padding">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!--- Footer -->
+<footer>
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-md-6">
+                <img src="{% static 'images/logo.png' %}">
+                <hr class="light">
+                <p>1800-999-1111</p>
+                <p><a href="name@mail.com"></a></p>
+                <p>15 Middle Road</p>
+                <p>City,State,000000</p>
+            </div>
+            <div class="col-md-6">
+                <h3>Our Hours</h3>
+                <hr class="light">
+                <p>Sunday:10am-3pm</p>
+                <p>Rest of the week:10am-9pm</p>
+            </div>
+            <div class="col-12"
+            <hr class="light">
+            <h5>&copy; ArchismanGhosh</h5>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

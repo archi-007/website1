@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+
+
+{% block title %}Capo - Login{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block shit %}<link href="{% static 'styles/style_index.css' %}" rel="stylesheet">{% endblock %}
+
+{% block body %}
+     <form method="POST" class="from-group">
+	{% csrf_token %}
+	{{form|crispy}}
+	<p>Don't have an account? Create one <a href="/register">here</a></p>
+	<button type="submit" class="btn btn-success">Login</button>	
+    </form>
+{% endblock %}

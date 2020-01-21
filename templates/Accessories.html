@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block shit %}<link href="{% static 'styles/style_pages.css' %}" rel="stylesheet">{% endblock %}
+
+{% block title %}Capo - Accessories{% endblock %}
+
+
+{% block body %}
+
+
+
+<!--accessories-->
+<div class="container-fluid padding">
+    <div class="row text-center padding">
+        <div class="col-12">
+            <h1 class="display-4">Accessories</h1>
+            <h3 class="display-6">For your guitar only</h3>
+        </div>
+        <hr>
+    </div>
+</div>
+
+
+<!--cards-->
+
+
+<div class="container-fluid padding">
+    <div class="row padding">
+        {% for acc in access%}
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-imd-top" src='{{acc.acc_image.url}}'>
+                <div class="card-body">
+                    <h5 class="card-title">{{acc.acc_name}}</h5>
+                    <h6 class="card-title-2">Rs. {{acc.acc_price}}</h6>
+                    <div>
+                        <strong>Features</strong>
+                    </div>
+                    <ul>
+                        <li>{{acc.feature_1}}</li>
+                        <li>{{acc.feature_2}}</li>
+                        <li>{{acc.feature_3}}</li>
+                        <li>{{acc.feature_4}}</li>
+                        <li>{{acc.feature_5}}</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline-secondary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}
